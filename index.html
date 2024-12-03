@@ -15,9 +15,25 @@
         Em breve, site destinado para portifólios.
         <img class="foto" id="foto" src="foto3.png" width="300" height="300" />
       </div>
+      <div>
+        <button id="btn" onmouseover="desvia(this)">Não clique</button>
+      </div>
     </section>
     <footer>
       <p>&copy;RenanLameira</p>
     </footer>
   </body>
+  <script>
+    function desvia(t) {
+      let btn = t;
+      btn.style.position = "absolute";
+      btn.style.bottom = geraposicao(10, 90);
+      btn.style.left = geraposicao(10, 90);
+      console.log("Desviei...");
+    }
+
+    function geraposicao(min, max) {
+      return Math.random() * (max - min) + min + "%";
+    }
+  </script>
 </html>
